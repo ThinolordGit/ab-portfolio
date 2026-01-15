@@ -1,0 +1,71 @@
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.avis-card {
+    background: var(--color-bg-dark);
+    border-radius: 1.2rem;
+    /* box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22); */
+    padding: .6em 1em;
+    min-width: 150px;
+    width: 100%;
+    text-align: start;
+    transition: box-shadow .3s ease
+}
+.avis-card:hover {
+    box-shadow: var(--shadow-violet);
+}
+.avis-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+    margin-bottom: .5em;
+}
+.avis-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px var(--color-shadow);
+}
+.avis-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+}
+.avis-name {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    font-size: 1em;
+    text-transform: capitalize;
+}
+.avis-stars-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+}
+.rate-star {
+    font-size: .8em;
+}
+.avis-stars-row .stars span {
+    background: linear-gradient(90deg, var(--color-accent1) 0%, var(--color-accent2) 50%, var(--color-accent3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.avis-time {
+    color: var(--color-time);
+    font-size: 0.9em;
+}
+.avis-text {
+    color: #6a6a7c;
+    font-size: .9em;
+}
+
+@media (max-width:600px) {
+  .testimonials-grid {grid-template-columns: repeat(1, minmax(200px, 1fr));gap: 1.5rem;}
+}

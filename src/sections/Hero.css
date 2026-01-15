@@ -1,0 +1,70 @@
+#hero {
+  flex-direction: column;
+}
+.spacer {
+  min-height: 115px;
+  max-height: 115px;
+  height: 115px;
+  width: 100%;
+}
+
+.avatar {
+  --r: 150px;
+  width: var(--r);
+  height: var(--r);
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
+  transition: border-width .2s ease;
+  background: linear-gradient(120deg, var(--color-accent2), var(--color-accent1), var(--color-accent3), #ff5f6d) border-box;
+  position: relative;
+  /* box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.4),
+      
+      -2px -2px 6px color-mix(in srgb, var(--color-accent1) 30%, transparent),
+      2px -1px 8px color-mix(in srgb, var(--color-accent2) 30%, transparent),
+      -1px  3px 8px color-mix(in srgb, var(--color-accent3) 30%, transparent),
+      2px  4px 10px rgba(255, 95, 109, 0.2); */
+  box-shadow:
+      /* Profondeur */
+      0 6px 18px rgba(0, 0, 0, 0.45),
+      /* Aura multicolore resserrée */
+      -4px -3px 10px color-mix(in srgb, var(--color-accent1) 40%, transparent),
+      4px -2px 12px color-mix(in srgb, var(--color-accent2) 40%, transparent),
+      -3px  5px 12px color-mix(in srgb, var(--color-accent3) 40%, transparent),
+      3px  6px 14px rgba(255, 95, 109, 0.25);
+          
+  background-clip: border-box;
+}
+
+@keyframes neonPulse {
+  0% {
+    box-shadow:
+      0 0 12px color-mix(in srgb, var(--color-accent1) 60%, transparent),
+      0 0 24px color-mix(in srgb, var(--color-accent2) 50%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 0 22px color-mix(in srgb, var(--color-accent3) 65%, transparent),
+      0 0 40px rgba(255, 95, 109, 0.45);
+  }
+  100% {
+    box-shadow:
+      0 0 12px color-mix(in srgb, var(--color-accent1) 60%, transparent),
+      0 0 24px color-mix(in srgb, var(--color-accent2) 50%, transparent);
+  }
+}
+.avatar:hover {
+  animation: neonPulse 2s ease-in-out infinite;
+  border-width: 3px;
+}
+
+@media (max-width:600px) {
+  .hero-row {flex-direction: column;align-items: center;}
+  .hero-row h1,.hero-row h2 {
+    text-align: center;
+  }
+  .hero-row .row {justify-content: center;}
+}

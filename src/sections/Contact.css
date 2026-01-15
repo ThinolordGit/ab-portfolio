@@ -1,0 +1,14 @@
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: .5rem;
+}
+.contact-item .icon {
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, var(--color-accent1) 0%, var(--color-accent2) 50%, var(--color-accent3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

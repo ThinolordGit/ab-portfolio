@@ -1,0 +1,392 @@
+
+.shield {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.shield-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 50%;
+    /* border: 1px solid rgba(131,131,218); */
+    transform-style: preserve-3d;
+}
+.shield-wrapper::before {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    width: 60%;
+    height: 15%;
+    transform: translateX(-50%);
+    background: rgb(95, 166, 241);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px 5px rgb(180, 143, 241), 1px 0px 20px 2px rgba(2, 188, 255, 0.515), 1px 0px 40px 1px rgba(81, 0, 255, 0.4);
+    border: 3px solid rgb(117, 186, 251);
+}
+.sphere {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation-delay: calc(var(--i)*.2s);
+    animation: rotate 1.8s infinite linear;
+}
+.line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(188, 136, 248, 0.06);
+    transition: all .1s ease;
+    border: 1px solid rgba(131,131,218);
+    box-shadow: 1px 0px 10px -2px rgba(189, 136, 248, 0.4), 1px 0px 14px -2px rgba(126, 175, 248, 0.4);
+    
+}
+@keyframes rotate {
+    from {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+/* ==================== SHIELD ALT ================= */
+shield-alt-right,shield-alt-left {
+    width: 80px;
+    height: 200px;
+    /* border: 1px solid red; */
+}
+shield-alt-right .shield-alt-wrapper,shield-alt-left .shield-alt-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* animation: shieldupdown .6s infinite alternate; */
+}
+
+shield-alt-right .shield-alt, shield-alt-left .shield-alt {
+    width: 40%;
+    height: 100%;
+    background: rgba(82, 203, 255, 0.442);
+    border-radius: 53% 47% 51% 49% / 0% 0% 100% 100%;
+    position: relative;
+    border: 2px solid rgba(90, 211, 255, 0.908);
+    box-shadow: -2px 0 15px rgba(90, 211, 255, 0.7), -2px 0 30px rgba(0, 229, 255, 0.5);
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    perspective: 1000px;
+}
+shield-alt-right .shield-alt {
+    transform: rotateZ(5deg);
+}
+shield-alt-left .shield-alt {
+    transform: rotateZ(-5deg);
+}
+shield-alt-right .glow,shield-alt-left .glow {
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 40%;
+    border: 1px solid rgb(123, 220, 255);
+    background: radial-gradient(circle, rgb(202, 235, 255), rgba(214, 239, 255, 1));
+    animation: glowing 1.5s infinite ease-in-out;
+    box-shadow: -5px 10px 20px 5px rgb(123, 220, 255), -1px -10px 20px 5px rgb(111, 238, 255);
+    border-radius: 53% 47% 51% 49% / 0% 0% 100% 100% ;
+    transform: translateY(-50%);
+}
+shield-alt-right .glow {
+    right: 0;
+}
+shield-alt-left .glow {
+    left: 0;
+}
+shield-alt-right .effect-allure, shield-alt-left .effect-allure {
+    position: relative;
+    width: 60%;
+    height: 30px;
+    overflow: hidden;
+}
+shield-alt-right .effect-allure .allure-child,shield-alt-left .effect-allure .allure-child {
+    position: absolute;
+    top: calc(20%*var(--i));
+    width: 60%;
+    height: 2px;
+    border-radius: 50%;
+    background: rgb(202, 235, 255);
+    transform: translateX(-50%);
+    animation-delay: calc(var(--i)*.2s);
+    animation: allure .4s infinite linear;
+}
+shield-alt-left .effect-allure .allure-child{
+    animation-direction: reverse;
+}
+shield-alt-right .effect-allure .allure-child.al-1,shield-alt-left .effect-allure .allure-child.al-1{
+    left: -200%;
+}
+shield-alt-right .effect-allure .allure-child.al-2,shield-alt-left .effect-allure .allure-child.al-2{
+    left: -100%;
+}
+shield-alt-right .effect-allure .allure-child.al-3,shield-alt-left .effect-allure .allure-child.al-3{
+    left: -150%;
+}
+shield-alt-right .effect-allure .allure-child.al-4,shield-alt-left .effect-allure .allure-child.al-4{
+    left: -50%;
+}
+shield-alt-right .effect-allure .allure-child.al-5,shield-alt-left .effect-allure .allure-child.al-5{
+    left: -225%;
+}
+
+@keyframes allure {
+    to {
+        left: 150%;
+    }
+}
+@keyframes shieldupdown {
+    0% {
+        transform: translateY(-5%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
+@keyframes glowing {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+
+/* ================== STURNING EFFECT =============== */
+.sturn {
+    width: 100px;
+    height: fit-content;
+    perspective: 600px;
+}
+
+/* Conteneur des étoiles */
+.sturn .sturn-star-container {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    transform-style: preserve-3d;
+    animation: sturning 1.2s infinite linear;
+}
+
+/* Chaque étoile */
+.sturn-star {
+    position: absolute;
+    font-size: 1rem;
+    color: rgb(255, 228, 92);
+    text-shadow: 1px 1px 10px rgb(254, 239, 77);
+    transform-origin: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(calc(36deg * var(--i))) translateZ(50px);
+}
+.sturn-star:nth-child(odd) {
+    font-size: .6rem;
+}
+.sturn-star:nth-child(even) {
+    font-size: .8rem;
+}
+
+/* Animation de rotation autour de l'axe Y */
+@keyframes sturning {
+  from {
+    transform: rotateX(10deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(10deg) rotateY(360deg);
+  }
+}
+
+/* ========================= Single Slash effect ===============*/
+/* Conteneur */
+.singleslashC {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 150px;
+  height: fit-content;
+  border-radius: 50%;
+  /* border: 2px solid red; */
+  transform: rotate(180deg);
+}
+
+/* Effet de Slash */
+.singleslash {
+  margin: 2px auto;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  border-radius: 50%;
+  background: transparent;
+  transform: rotate(0);
+}
+
+/* Effet de Slash */
+.singleslash::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #d071fc, #891fb0);
+  /* transform: rotate(-45deg); */
+}
+
+.singleslash-setEffect .singleslash::before {
+  animation: singleslash .3s 1 linear forwards;
+}
+
+
+/* Animation de l'effet Slash avec direction claire */
+@keyframes singleslash {
+  0% {
+      left: 0;
+      width: 0%;
+  }
+  15% {
+      left: 0%;
+      width: 100%;
+      box-shadow: 0 0 10px 5px rgba(161, 78, 184, 0.504);
+  }
+  30%,50% {
+      left: 100%;
+      /* opacity: 0; */
+      width: 0%;
+      height: 10px;
+      transform: translateY(-50%);
+      background: rgb(136, 81, 165);
+      box-shadow: 0 0 30px 10px rgba(252, 222, 255, 0.762);
+  }
+  51%,60% {
+      left: 100%;
+      box-shadow: 0 0 30px 10px rgba(252, 222, 255, 0);
+  }
+  100% {
+      left: 100%;
+      width: 4%;
+      height: 100px;
+      /* opacity: 0; */
+      transform: translateY(-50%);
+      display: none;
+      background: rgb(255, 247, 255);
+      box-shadow: 0 0 50px 30px rgb(226, 184, 247);
+  }
+}
+
+.expandable-section {
+    overflow: hidden;
+}
+.expandable-header {
+    font-size: .7rem;cursor: pointer;
+    gap: .8rem;
+    background: var(--surface);padding: 8px 12px;border-radius: 8px;margin-top: 12px;user-select: none;
+    transition: background 0.25s ease;
+}
+.expandable-title {
+    font-size: .7rem;
+}
+/* .expandable-title {white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;} */
+.expandable-header small {color: var(--muted);}
+.expandable-header .span-ico {transition: transform 0.25s ease;}
+
+
+.dash-panel-closer {
+  transition: all ease .2s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-200%, -50%);
+  background: var(--card);
+  cursor: pointer;
+}
+
+.floatingButton {
+    position: fixed;
+    right: 4.2rem;
+    bottom: 2.5rem;
+    transition: all ease .3s;
+    opacity: 1;
+    z-index: 999999;
+}
+
+body:has(input:focus) .floatingButton {
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* ===== BURGER BUTTON ===== */
+.burger {
+  width: 25px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 3px;
+    transition: 0.4s ease;
+    background: var(--primary-muted);
+}
+[data-theme="dark"] .burger span {
+  background: linear-gradient(180deg, rgb(36 36 45), var(--primary-muted));
+}
+.burger span:last-child {
+  margin-bottom: 0;
+}
+
+.burger span:nth-child(1) {
+  width: 100%;
+}
+
+.burger span:nth-child(2) {
+  width: 75%;
+}
+
+.burger span:nth-child(3) {
+  width: 50%;
+}
+
+/* Animation croix */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+  width: 100%;
+}

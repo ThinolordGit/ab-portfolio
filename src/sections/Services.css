@@ -1,0 +1,97 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 1.5rem 1.2rem;
+}
+
+.service-post {
+    background: var(--color-bg-dark);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.service-post:hover {
+  transform: translateY(-2px);
+   box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.4),
+        
+        -2px -2px 6px color-mix(in srgb, var(--color-accent1) 30%, transparent),
+        2px -1px 8px color-mix(in srgb, var(--color-accent2) 30%, transparent),
+        -1px  3px 8px color-mix(in srgb, var(--color-accent3) 30%, transparent),
+        2px  4px 10px rgba(255, 95, 109, 0.2);
+}
+
+.service-actions {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: .5em 0.3em;
+    padding-bottom: 0;
+    gap: 1em;
+    font-size: 0.9em;
+}
+.service-actions button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    background: linear-gradient(90deg, var(--color-accent1) 0%, var(--color-accent2) 50%, var(--color-accent3) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background 0.2s, box-shadow 0.2s;
+    padding: 0.1em 0.4em;
+    border-radius: 1em;
+    overflow: hidden;
+    --var-shdw: rgb(203 223 234 / 9%);
+    border: 1px solid var(--var-shdw)
+}
+/* .service-actions button:hover {
+    --var-shdw: rgb(203 223 234 / 9%);
+    box-shadow: 0 0 0 2px var(--var-shdw), 0 1px 4px 0 var(--var-shdw);
+} */
+.service-actions button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    z-index: 2;
+}
+.service-actions button:hover::before {
+    animation: btn-glow 1.5s .5s linear infinite;
+}
+.service-actions button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+    transform: skewX(-20deg);
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 1em;
+    will-change: width;
+    transition: width .3s ease-in-out;
+    transition-delay: .1s;
+}
+.service-actions button:hover::after {
+    width: 150%;
+}
+
+@media (max-width:670px) {
+  .services-grid {grid-template-columns: repeat(1, minmax(180px, 1fr));gap: 1.5rem 1.2rem;}
+}

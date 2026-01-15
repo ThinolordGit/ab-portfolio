@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Portfolio Amadou Aboubakar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Un portfolio interactif haut de gamme pour Amadou Aboubakar, media-bailleur et entrepreneur digital.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Ce projet est un portfolio moderne et élégant conçu avec React, mettant en avant un thème sombre futuriste avec des effets de glassmorphism. Il inclut des animations fluides au défilement et est entièrement responsive.
 
-### `npm start`
+## Fonctionnalités
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Thème sombre futuriste** : Design moderne avec gradients et effets de verre.
+- **Animations au scroll** : Utilisation de l'Intersection Observer pour des révélations progressives.
+- **Glassmorphism** : Effets de transparence et de flou pour un look moderne.
+- **Responsive** : Adapté à tous les appareils.
+- **Sections complètes** : Hero, À propos, Services, Projets, Témoignages, Contact.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies utilisées
 
-### `npm test`
+- React
+- CSS3 (avec animations et effets)
+- Intersection Observer API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+1. Clonez le repository :
+   ```bash
+   git clone https://github.com/votre-repo/ab-portfolio.git
+   cd ab-portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Installez les dépendances :
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Lancez le serveur de développement :
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-### `npm run eject`
+## Structure du projet
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+src/
+├── components/          # Composants réutilisables
+├── hooks/              # Hooks personnalisés (useScrollReveal)
+├── App.js              # Composant principal
+├── App.css             # Styles principaux
+└── index.css           # Styles globaux
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Personnalisation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Modifiez le contenu dans `App.js` pour adapter les informations.
+- Ajustez les styles dans `App.css` et `index.css`.
+- Remplacez les images placeholder par vos propres images.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Déploiement
 
-## Learn More
+Pour déployer sur GitHub Pages ou Vercel :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Puis suivez les instructions de votre plateforme de déploiement.
 
-### Code Splitting
+## Auteur
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Amadou Aboubakar - Entrepreneur Digital
 
-### Analyzing the Bundle Size
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ce projet est sous licence MIT.

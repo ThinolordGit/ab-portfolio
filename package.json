@@ -1,6 +1,11 @@
 {
   "name": "ab-portfolio",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "author": {
+    "email": "thinolord@gmail.com",
+    "name": "Grâce-Othniel Dossou-yovo",
+    "url": "https://github.com/ThinolordGit"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
@@ -9,6 +14,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "react-router-dom": "^7.12.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
