@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo"><div className="d-flex ai-center gap-3">
-                    <img src={usePublicUri("img/pp2.jpg")} alt={"Amadou Aboubakar Presention-p"} className="avis-avatar" />
+                    <img loading='lazy' src={usePublicUri("img/pp2.jpg")} alt={"Amadou Aboubakar Presention-p"} className="avis-avatar" />
                     <div className="fcol ai-start">
                         <span className="avis-name">Amadou Aboubakar</span>
                         <span className="color-white">Portfolio</span>
@@ -32,7 +32,7 @@ const Navbar = () => {
                         <span className="avis-name">Amadou Aboubakar</span>
                         <span className="color-white">Portfolio</span>
                     </div>
-                    <img src={usePublicUri("img/pp2.jpg")} alt={"Amadou Aboubakar Presention-p"} className="avis-avatar" />
+                    <img loading='lazy' src={usePublicUri("img/pp2.jpg")} alt={"Amadou Aboubakar Presention-p"} className="avis-avatar" />
                 </div>
             </div>
             {<div className={"nav-menu flex-col position-absolute "+(menuActive ? "active" : "")}>

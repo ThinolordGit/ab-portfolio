@@ -11,8 +11,8 @@ const Hero = () => {
             <div className="spacer"></div>
             <div ref={refProp} className="xf-reveal glass-card">
                 <div className="d-flex hero-row ai-start gap-4">
-                    {/* <img src="https://picsum.photos/300/300?random=1" alt="Amadou Aboubakar" className='avatar' /> */}
-                    <img src={usePublicUri("img/pp.jpg")} alt="Amadou Aboubakar Presentation" className='avatar' />
+                    {/* <img loading='lazy' src="https://picsum.photos/300/300?random=1" alt="Amadou Aboubakar" className='avatar' /> */}
+                    <img loading='lazy' src={usePublicUri("img/pp.jpg")} alt="Amadou Aboubakar Presentation" className='avatar' />
                     <div className="fcol flex-1">
                         <h1 className='mb-2 gradient-color'>Amadou Aboubakar</h1>
                         <h2 className='mb-3 first'>Media-Bailleur & Entrepreneur Digital</h2>

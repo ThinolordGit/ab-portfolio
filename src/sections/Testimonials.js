@@ -47,7 +47,7 @@ function TestiCardBuilder ({testimonial,...rest}) {
  return (
   <div className="avis-card" {...rest}>
     <div className="avis-row">
-        <img src={testimonial.avatar} alt={testimonial.name} className="avis-avatar" />
+        <img loading='lazy' src={testimonial.avatar} alt={testimonial.name} className="avis-avatar" />
         <div className="avis-col">
             <span className="avis-name">{testimonial.name}</span>
             <div className="avis-stars-row">
