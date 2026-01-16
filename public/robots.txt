@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tonsite.netlify.app/sitemap.xml
+Sitemap: https://ab-portfolio-tl.netlify.app/sitemap.xml
