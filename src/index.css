@@ -209,7 +209,9 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+}
+html, body {
+  overflow: hidden auto;
 }
 div, p, section, button, form {
   font-size: .85rem;
