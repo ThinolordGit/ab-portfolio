@@ -1,6 +1,6 @@
-# Portfolio Amadou Aboubakar
+# Portfolio AMADOU Aboubakar
 
-Un portfolio interactif haut de gamme pour Amadou Aboubakar, media-bailleur et entrepreneur digital.
+Un portfolio interactif haut de gamme pour AMADOU Aboubakar, media-buyer et entrepreneur digital.
 
 ## Description
 
@@ -69,7 +69,7 @@ Puis suivez les instructions de votre plateforme de déploiement.
 
 ## Auteur
 
-Amadou Aboubakar - Entrepreneur Digital
+AMADOU Aboubakar - Entrepreneur Digital
 
 ## Licence
 

@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="nav-logo"><div className="d-flex ai-center gap-3">
                     <img loading='lazy' src={usePublicUri("img/pp2.jpg")} alt={"Amadou Aboubakar Presention-p"} className="avis-avatar" />
                     <div className="fcol ai-start">
-                        <span className="avis-name">Amadou Aboubakar</span>
+                        <span className="avis-name">AMADOU Aboubakar</span>
                         <span className="color-white">Portfolio</span>
                     </div>
                 </div></div>
@@ -29,7 +29,7 @@ const Navbar = () => {
                 <BurgerToggle defaultOpen={menuActive} onToggle={setMenuActive} />
                 <div className="d-flex ai-center gap-3">
                     <div className="fcol ai-end">
-                        <span className="avis-name">Amadou Aboubakar</span>
+                        <span className="avis-name">AMADOU Aboubakar</span>
                         <span className="color-white">Portfolio</span>
                     </div>
                     <img loading='lazy' src={usePublicUri("img/pp2.jpg")} alt={"Amadou Aboubakar Presention-p"} className="avis-avatar" />

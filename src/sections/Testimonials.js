@@ -18,7 +18,7 @@ const testimonialsData = [
     id: 1,
     name: "Client Satisfait 1",
     avatar: "https://picsum.photos/100/100?random=10",
-    testimonial: "Amadou a transformé notre présence en ligne. Ses stratégies ont doublé nos ventes en quelques mois.",
+    testimonial: "AMADOU a transformé notre présence en ligne. Ses stratégies ont doublé nos ventes en quelques mois.",
     rating: 5
   },
   {
