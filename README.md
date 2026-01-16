@@ -24,7 +24,7 @@ Ce projet est un portfolio moderne et élégant conçu avec React, mettant en av
 
 1. Clonez le repository :
    ```bash
-   git clone https://github.com/votre-repo/ab-portfolio.git
+   git clone https://github.com/ThinolordGit/ab-portfolio.git
    cd ab-portfolio
    ```
 
